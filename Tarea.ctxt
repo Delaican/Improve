@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Tarea
+comment1.params=fecha_entrega\ nombre\ favorita\ lista
+comment1.target=Tarea(java.lang.String,\ java.lang.String,\ boolean,\ Lista)
+comment2.params=
+comment2.target=java.time.LocalDate\ getFecha_entrega()
+comment3.params=fecha_entrega
+comment3.target=void\ setFecha_entrega(java.time.LocalDate)
+comment4.params=
+comment4.target=java.lang.String\ getNombre()
+comment5.params=nombre
+comment5.target=void\ setNombre(java.lang.String)
+comment6.params=
+comment6.target=boolean\ isFavorita()
+comment7.params=favorita
+comment7.target=void\ setFavorita(boolean)
+numComments=8
