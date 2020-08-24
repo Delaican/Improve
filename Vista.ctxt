@@ -1,9 +1,14 @@
 #BlueJ class context
 comment0.target=Vista
+comment0.text=\r\n\r\n\ @author\ 8.1Pro\r\n
 comment1.params=
-comment1.target=void\ agregarLista()
+comment1.target=Vista()
 comment2.params=
-comment2.target=void\ agregarTarea()
+comment2.target=void\ crearLista()
 comment3.params=
-comment3.target=void\ calendario()
-numComments=4
+comment3.target=void\ crearTarea()
+comment4.params=
+comment4.target=void\ calendario()
+comment5.params=
+comment5.target=void\ pestana()
+numComments=6

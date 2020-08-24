@@ -13,7 +13,7 @@ public class Ajuste
     /**
      * Constructor for objects of class Ajustes
      */
-    public Ajustes()
+    public Ajuste()
     {
         // initialise instance variables
         

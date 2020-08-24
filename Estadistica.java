@@ -8,14 +8,13 @@
 public class Estadistica
 {
     // instance variables - replace the example below with your own
-    private Tareas tareas;
-    private Listas listas;
+    private Tarea tarea;
+    private Lista lista;
     private Gestor gestor;
-    private OpcionesTareas opcionestareas;
     /**
      * Constructor for objects of class Estadisticas
      */
-    public Estadisticas()
+    public Estadistica()
     {
         // initialise instance variables
     }

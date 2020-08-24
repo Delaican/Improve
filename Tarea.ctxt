@@ -1,7 +1,10 @@
 #BlueJ class context
 comment0.target=Tarea
+comment0.text=\r\n\r\n\ @author\ 8.1Pro\r\n
 comment1.params=fecha_entrega\ nombre\ favorita\ lista
-comment1.target=Tarea(java.lang.String,\ java.lang.String,\ boolean,\ Lista)
+comment1.target=Tarea(java.lang.String,\ java.lang.String,\ boolean,\ improve.Lista)
+comment10.params=
+comment10.target=void\ pestana()
 comment2.params=
 comment2.target=java.time.LocalDate\ getFecha_entrega()
 comment3.params=fecha_entrega
@@ -14,4 +17,8 @@ comment6.params=
 comment6.target=boolean\ isFavorita()
 comment7.params=favorita
 comment7.target=void\ setFavorita(boolean)
-numComments=8
+comment8.params=
+comment8.target=void\ crearLista()
+comment9.params=
+comment9.target=void\ crearTarea()
+numComments=11

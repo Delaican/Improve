@@ -1,13 +1,19 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+ 
+
+import java.util.ArrayList;
+
 
 /**
- * Listas para organizar tareas.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ *
+ * @author 8.1Pro
  */
-import java.util.ArrayList;
-public class Lista
-{
+public class Lista {
+    //private Tarea tarea;
     private String nombre;
     ArrayList<Tarea> lista = new ArrayList();
     
@@ -40,4 +46,5 @@ public class Lista
             System.out.println(lista1.getNombre());
         });
     }
+
 }

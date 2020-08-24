@@ -1,24 +1,28 @@
-/**
- * La clase Tareas permite acceder a los diferentes atributos de tareas.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
+ 
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.stream.IntStream;
-public class Tarea
-{
-  ArrayList<Lista> listas = new ArrayList();
-  private Tarea tarea;
-    
-    // instance variables - replace the example below with your own
+
+/**
+ *
+ * @author 8.1Pro
+ */
+public class Tarea {
+
     LocalDate fecha_entrega;
     private String nombre;
     private boolean favorita;
     private Lista lista;
+    private Tarea tarea;
+    ArrayList<Lista> listas = new ArrayList();
     Scanner s = new Scanner(System.in);
+
     public Tarea(String fecha_entrega, String nombre, boolean favorita, Lista lista) {
         this.fecha_entrega = LocalDate.parse(fecha_entrega);
         this.nombre = nombre;
@@ -49,13 +53,28 @@ public class Tarea
     public void setFavorita(boolean favorita) {
         this.favorita = favorita;
     }
-    
+
+    public void crearLista() {
+        while (true) {
+            System.out.println("¿Qué nombre tendrá la lista? ");
+            String nombre_lista = s.nextLine();
+            lista = new Lista(nombre_lista);
+            listas.add(lista);
+            System.out.println("¿Quieres agregar otra lista? ");
+            String resp = s.nextLine();
+            if ("n".equals(resp)) {
+                break;
+            }
+        }
+        System.out.println();
+    }
+
     public void crearTarea() {
-      while (true) {
-            System.out.println("¿Cómo se llamará la tarea? (consejo: evita nombres genéricos como \"trabajo de...\" o \"basura para entregar\") ");
+        while (true) {
+            System.out.println("¿Cómo se llamará la tarea? (consejo: evita nombres genéricos como \"trabajo de...\" o \"cosa para entregar\") ");
             String nombre_tarea = s.nextLine();
-            System.out.println("¿Para cuándo es la entrega de esa tareijirilla? (YYYY-MM-DD)");
-            String fecha_entrega = s.nextLine();
+            System.out.println("¿Para cuándo es la entrega de esa tarea? (YYYY-MM-DD)");
+            String fecha = s.nextLine();
             System.out.println("¿Tienes ganas de hacer la tarea? ");
             String resp = s.nextLine();
             boolean fav = false;
@@ -74,8 +93,8 @@ public class Tarea
                     l = listas.get(i);
                 }
             }
-            tarea = new Tarea(fecha_entrega, nombre_tarea, fav, l);
-            System.out.println("¿Quieres agregar otra tareijirijilla? ");
+            tarea = new Tarea(fecha, nombre_tarea, fav, l);
+            System.out.println("¿Quieres agregar otra tareaa? ");
             resp = s.nextLine();
             if ("n".equals(resp)) {
                 listas.forEach((lista1) -> {
@@ -84,7 +103,18 @@ public class Tarea
                 });
                 break;
             }
-      }
+        }
         //l.mostrarLista();
     }
-}   
+
+    public void pestana() {
+        String resp;
+        System.out.println("Improve v.0");
+        System.out.println("-------------------------\n");
+            System.out.println("1. Crear tarea");
+            resp = s.nextLine();
+            if ("1".equals(resp)) {
+                crearTarea();
+            }
+    }
+}
