@@ -1,10 +1,10 @@
-
-/**
- * Permite gestionar las tareas y utilizar el pomodoro.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
+ 
+
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -29,7 +29,7 @@ public class Gestor {
 
     public void pomodoro() {
         int segundos = 10;
-        while(segundos>0){
+        for(int i=0; i<segundos; i++){
             try {
                 System.out.println(segundos);
                 segundos--;
@@ -38,8 +38,10 @@ public class Gestor {
                 Logger.getLogger(Gestor.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        System.out.println("Lograste completar un pomodoro!");
-        pomCompletos++;
         
+        if(segundos==0){
+            System.out.println("Lograste completar un pomodoro!");
+            pomCompletos++;
+        }
     }
 }

@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
- 
 
 import java.util.ArrayList;
 
 
 /**
- * Esta clase define objetos de tipo Tarea.
+ * Esta clase define objetos de tipo Lista.
  * 
  * @authors Christian Ruiz Lagos, Kevin Joel Dlaikan
  * @version 08/20/2020
@@ -18,7 +17,6 @@ public class Lista {
     //private Tarea tarea;
     private String nombre;
     ArrayList<Tarea> lista;
-    
      /**
      * Constructor de la clase Lista.
      * @param nombre El nombre de la Lista.
@@ -27,17 +25,14 @@ public class Lista {
         this.nombre = nombre;
          lista = new ArrayList();
     }
-<<<<<<< Updated upstream
+    public Lista getObjectLista() {
+        return this;
+    }
 
     /**
      * Método que permite obtener el nombre de un objeto de tipo Lista.
      * @return Nombre de la lista.
      */
-=======
-    public Lista getObjectLista() {
-        return this;
-    }
->>>>>>> Stashed changes
     public String getNombre() {
         return nombre;
     }

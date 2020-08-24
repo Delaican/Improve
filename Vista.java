@@ -17,8 +17,8 @@ import java.time.LocalDate;
 public class Vista {
 
     Scanner s = new Scanner(System.in);
-    private Tarea tarea;
-    private Lista lista;
+    Tarea tarea;
+    Lista lista;
     Lista l1;
     Lista l2;
     Lista l3;
@@ -177,12 +177,11 @@ public class Vista {
 
         }
         System.out.println("Deseas ir a la pestaña de tareas o quieres quedarte en la sección de vistas? s/n");
-        System.out.println("Puedes salir de la aplicación pulsando 0.");
+        System.out.println("O para salir de la aplicación pulsa 0");
         resp = s.nextLine();
-        if ("0".equals(resp)){
+        if ("0".equals(resp)) {
             
-        }
-        else if ("s".equals(resp)) {
+        } else if ("s".equals(resp)) {
             tarea.pestana();
         } else {
             pestana();

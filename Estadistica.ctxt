@@ -1,19 +1,4 @@
 #BlueJ class context
 comment0.target=Estadistica
-comment0.text=\r\n\ Muestra\ las\ estad\u00EDsticas\ del\ usuario.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=Estadistica()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Estadisticas\r\n
-comment2.params=fecha
-comment2.target=int\ tiempoInvTareas(int)
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
-comment3.params=tiempo
-comment3.target=int\ tiempoPomodoro(int)
-comment3.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
-comment4.params=completa
-comment4.target=int\ checkCompletas(boolean)
-comment4.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
-comment5.params=completado
-comment5.target=int\ checkPomodoro(boolean)
-comment5.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
-numComments=6
+comment0.text=\r\n\r\n\ @author\ 8.1Pro\r\n
+numComments=1

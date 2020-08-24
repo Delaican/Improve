@@ -1,23 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
- 
-
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Scanner;
-
-
-/**
- * Esta clase define objetos de tipo Tarea.
- * 
- * @authors Christian Ruiz Lagos, Kevin Joel Dlaikan
- * @version 08/20/2020
- */
-public class Tarea {
-
+    /*
+     * To change this license header, choose License Headers in Project Properties.
+     * To change this template file, choose Tools | Templates
+     * and open the template in the editor.
+     */
+     
+    
+    import java.time.LocalDate;
+    import java.util.ArrayList;
+    import java.util.Scanner;
+    
+    /**
+     * Esta clase define objetos de tipo Tarea.
+     * 
+     * @authors Christian Ruiz Lagos, Kevin Joel Dlaikan
+     * @version 08/20/2020
+     */
+    public class Tarea {
+    
     LocalDate fecha_entrega;
     private String nombre;
     private boolean favorita;
@@ -26,35 +25,21 @@ public class Tarea {
     private long tInvertido = 0;
     private Lista lista;
     private Tarea tarea;
-    private Vista v;
     private Gestor gestor;
+    private Vista v;
     ArrayList<Lista> listas = new ArrayList();
     Scanner s = new Scanner(System.in);
     
-     /**
-     * Constructor de la clase Tarea.
-     * @param nombre El nombre de la Tarea.
-     * @param fecha_entrega La fecha de entrega de la Tarea.
-     * @param favorita true si la Tarea es favorita o false si no lo es.
-     * @param lista La lista a la cual pertenece la Tarea.
-     */
-    public Tarea(String nombre, LocalDate fecha_entrega, boolean favorita, Lista lista) {
-        this.nombre = nombre;
-        this.fecha_entrega = fecha_entrega;
-        this.favorita = favorita;
-        lista.agregarTarea(this);
-    }
-<<<<<<< Updated upstream
-    
+        public Tarea(String nombre, LocalDate fecha_entrega, boolean favorita, Lista lista) {
+            this.nombre = nombre;
+            this.fecha_entrega = fecha_entrega;
+            this.favorita = favorita;
+            lista.agregarTarea(this);
+        }
      /**
      * Método que permite obtener el nombre de un objeto de tipo Tarea.
      * @return Nombre de la tarea.
      */
-=======
-    public Tarea getTarea() {
-        return this;
-    }
->>>>>>> Stashed changes
     public String getNombre() {
         return nombre;
     }
@@ -137,28 +122,28 @@ public class Tarea {
         tFinal = 0;
         tInicio = System.nanoTime();
     }
-
      /**
      * Método de prueba para crear Lista desde la pestaña Tareas.
      */
-    public void crearLista() {
-        while (true) {
-            System.out.println("¿Qué nombre tendrá la lista? ");
-            String nombre_lista = s.nextLine();
-            lista = new Lista(nombre_lista);
-            listas.add(lista);
-            System.out.println("¿Quieres agregar otra lista? ");
-            String resp = s.nextLine();
+    
+        public void crearLista() {
+            while (true) {
+                System.out.println("¿Qué nombre tendrá la lista? ");
+                String nombre_lista = s.nextLine();
+                lista = new Lista(nombre_lista);
+                listas.add(lista);
+                System.out.println("¿Quieres agregar otra lista? ");
+                String resp = s.nextLine();
             if ("n".equals(resp)) {
                 break;
             }
         }
         System.out.println();
     }
-
-     /**
+    /**
      * Método de prueba para crear Tarea.
      */
+
     public void crearTarea() {
         while (true) {
             System.out.println("¿Cómo se llamará la tarea? (consejo: evita nombres genéricos como \"trabajo de...\" o \"cosa para entregar\") ");
@@ -197,7 +182,6 @@ public class Tarea {
         }
         //l.mostrarLista();
     }
-
      /**
      * Método de prueba para crear Pestaña (menú que simula las funcionalidades de cada pestaña).
      */
@@ -225,5 +209,9 @@ public class Tarea {
             v = new Vista();
             v.pestana();
         }
+    }
+
+    public Tarea getTarea() {
+        return this;
     }
 }
