@@ -18,40 +18,64 @@ public class Tarea {
     LocalDate fecha_entrega;
     private String nombre;
     private boolean favorita;
+    private long tInicio = 0;
+    private long tFinal = 0;
     private Lista lista;
     private Tarea tarea;
+    private Gestor gestor;
     ArrayList<Lista> listas = new ArrayList();
     Scanner s = new Scanner(System.in);
 
-    public Tarea(String fecha_entrega, String nombre, boolean favorita, Lista lista) {
-        this.fecha_entrega = LocalDate.parse(fecha_entrega);
+    public Tarea(String nombre, LocalDate fecha_entrega, boolean favorita, Lista lista) {
         this.nombre = nombre;
+        this.fecha_entrega = fecha_entrega;
         this.favorita = favorita;
         lista.agregarTarea(this);
-    }
-
-    public LocalDate getFecha_entrega() {
-        return fecha_entrega;
-    }
-
-    public void setFecha_entrega(LocalDate fecha_entrega) {
-        this.fecha_entrega = fecha_entrega;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public LocalDate getFecha_entrega() {
+        return fecha_entrega;
     }
 
     public boolean isFavorita() {
         return favorita;
     }
 
+    public Lista getListaDestino() {
+        return lista;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setFecha_entrega(LocalDate fecha_entrega) {
+        this.fecha_entrega = fecha_entrega;
+    }
+
     public void setFavorita(boolean favorita) {
         this.favorita = favorita;
+    }
+
+    public void setListaDestino(Lista lista) {
+        this.lista = lista;
+    }
+
+    public void iniciarTarea() {
+        tInicio = System.nanoTime();
+    }
+
+    public void detenerTarea() {
+        tFinal = System.nanoTime();
+    }
+
+    public void reiniciarTarea() {
+        tInicio = System.nanoTime();
+        tFinal = 0;
     }
 
     public void crearLista() {
@@ -74,7 +98,8 @@ public class Tarea {
             System.out.println("¿Cómo se llamará la tarea? (consejo: evita nombres genéricos como \"trabajo de...\" o \"cosa para entregar\") ");
             String nombre_tarea = s.nextLine();
             System.out.println("¿Para cuándo es la entrega de esa tarea? (YYYY-MM-DD)");
-            String fecha = s.nextLine();
+            String fecha_str = s.nextLine();
+            LocalDate fecha = LocalDate.parse(fecha_str);
             System.out.println("¿Tienes ganas de hacer la tarea? ");
             String resp = s.nextLine();
             boolean fav = false;
@@ -93,7 +118,7 @@ public class Tarea {
                     l = listas.get(i);
                 }
             }
-            tarea = new Tarea(fecha, nombre_tarea, fav, l);
+            tarea = new Tarea(nombre_tarea, fecha, fav, l);
             System.out.println("¿Quieres agregar otra tareaa? ");
             resp = s.nextLine();
             if ("n".equals(resp)) {
@@ -111,10 +136,16 @@ public class Tarea {
         String resp;
         System.out.println("Improve v.0");
         System.out.println("-------------------------\n");
-            System.out.println("1. Crear tarea");
-            resp = s.nextLine();
-            if ("1".equals(resp)) {
-                crearTarea();
-            }
+        System.out.println("1. Crear tarea");
+        System.out.println("2. Crear lista");
+        System.out.println("3. Gestor/pomodoro");
+        resp = s.nextLine();
+        if ("1".equals(resp)) {
+            crearTarea();
+        } else if ("2".equals(resp)) {
+            crearLista();
+        } else if ("3".equals(resp)) {
+            //gestor.pestana();
+        }
     }
 }

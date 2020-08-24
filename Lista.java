@@ -15,10 +15,11 @@ import java.util.ArrayList;
 public class Lista {
     //private Tarea tarea;
     private String nombre;
-    ArrayList<Tarea> lista = new ArrayList();
+    ArrayList<Tarea> lista;
     
     public Lista(String nombre){
         this.nombre = nombre;
+         lista = new ArrayList();
     }
 
     public String getNombre() {

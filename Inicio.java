@@ -12,7 +12,7 @@
 public class Inicio {
 
     private Vista v = new Vista();
-    private Ajuste ajuste;
+
     public Inicio() {
         //menu();
         v.pestana();
