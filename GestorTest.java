@@ -6,17 +6,17 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * The test class ListaTest.
+ * The test class GestorTest.
  *
  * @author  (your name)
  * @version (a version number or a date)
  */
-public class ListaTest
+public class GestorTest
 {
     /**
-     * Default constructor for test class ListaTest
+     * Default constructor for test class GestorTest
      */
-    public ListaTest()
+    public GestorTest()
     {
     }
 
@@ -41,18 +41,10 @@ public class ListaTest
     }
 
     @Test
-    public void testNombre()
+    public void testPomCompletos()
     {
-        Lista lista1 = new Lista("mi dia");
-        assertEquals("mi dia", lista1.getNombre());
-    }
-
-    @Test
-    public void testCrearLista()
-    {
-        Lista lista1 = new Lista("semestre");
-        assertEquals(lista1, lista1.getObjectLista());
+        Gestor gestor1 = new Gestor();
+        assertEquals(0, gestor1.getPomCompletos());
     }
 }
-
 

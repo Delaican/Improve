@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
+import java.time.LocalDate;
 /**
  * The test class TareaTest.
  *
@@ -41,10 +41,17 @@ public class TareaTest
     }
 
     @Test
-    public void TestFavorito()
+    public void testCrearTarea()
     {
-        Lista lista1 = new Lista("asd");
-        Tarea tarea1 = new Tarea("2020-08-23", "Tarea", true, lista1);
+        Lista lista2 = new Lista("l");
+        Tarea tarea1 = new Tarea("sw", java.time.LocalDate.parse("2020-08-23"), true, lista2);
+        Tarea result = tarea1.getTarea();
+        assertEquals(tarea1, result);
+        java.time.LocalDate localDat1 = result.fecha_entrega;
     }
 }
+
+
+
+
 

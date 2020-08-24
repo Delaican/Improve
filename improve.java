@@ -8,7 +8,7 @@
 public class improve
 {
     // instance variables - replace the example below with your own
-        public static void main(String[] args) {
+    public static void main(String[] args) {
         Inicio inicio = new Inicio();
     }
 }

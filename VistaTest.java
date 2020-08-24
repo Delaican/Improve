@@ -6,17 +6,17 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * The test class ListaTest.
+ * The test class VistaTest.
  *
  * @author  (your name)
  * @version (a version number or a date)
  */
-public class ListaTest
+public class VistaTest
 {
     /**
-     * Default constructor for test class ListaTest
+     * Default constructor for test class VistaTest
      */
-    public ListaTest()
+    public VistaTest()
     {
     }
 
@@ -39,20 +39,14 @@ public class ListaTest
     public void tearDown()
     {
     }
-
+    
     @Test
-    public void testNombre()
+    public void testCrearTarea()
     {
-        Lista lista1 = new Lista("mi dia");
-        assertEquals("mi dia", lista1.getNombre());
-    }
-
-    @Test
-    public void testCrearLista()
-    {
-        Lista lista1 = new Lista("semestre");
-        assertEquals(lista1, lista1.getObjectLista());
+        Lista lista2 = new Lista("l");
+        Tarea tarea1 = new Tarea("sw", java.time.LocalDate.parse("2020-08-23"), true, lista2);
+        Tarea result = tarea1.getTarea();
+        assertEquals(tarea1, result);
+        java.time.LocalDate localDat1 = result.fecha_entrega;
     }
 }
-
-

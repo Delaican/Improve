@@ -177,8 +177,12 @@ public class Vista {
 
         }
         System.out.println("Deseas ir a la pestaña de tareas o quieres quedarte en la sección de vistas? s/n");
+        System.out.println("Puedes salir de la aplicación pulsando 0.");
         resp = s.nextLine();
-        if ("s".equals(resp)) {
+        if ("0".equals(resp)){
+            
+        }
+        else if ("s".equals(resp)) {
             tarea.pestana();
         } else {
             pestana();

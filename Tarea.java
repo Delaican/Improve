@@ -26,6 +26,7 @@ public class Tarea {
     private long tInvertido = 0;
     private Lista lista;
     private Tarea tarea;
+    private Vista v;
     private Gestor gestor;
     ArrayList<Lista> listas = new ArrayList();
     Scanner s = new Scanner(System.in);
@@ -43,11 +44,17 @@ public class Tarea {
         this.favorita = favorita;
         lista.agregarTarea(this);
     }
+<<<<<<< Updated upstream
     
      /**
      * Método que permite obtener el nombre de un objeto de tipo Tarea.
      * @return Nombre de la tarea.
      */
+=======
+    public Tarea getTarea() {
+        return this;
+    }
+>>>>>>> Stashed changes
     public String getNombre() {
         return nombre;
     }
@@ -207,7 +214,16 @@ public class Tarea {
         } else if ("2".equals(resp)) {
             crearLista();
         } else if ("3".equals(resp)) {
-            //gestor.pestana();
+            gestor = new Gestor();
+            gestor.pomodoro();
+        }
+        System.out.println("Deseas volver a la pestaña de tareas o volver a vistas? s/n");
+        resp = s.nextLine();
+        if ("s".equals(resp)) {
+            pestana();
+        } else {
+            v = new Vista();
+            v.pestana();
         }
     }
 }

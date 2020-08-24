@@ -27,11 +27,17 @@ public class Lista {
         this.nombre = nombre;
          lista = new ArrayList();
     }
+<<<<<<< Updated upstream
 
     /**
      * Método que permite obtener el nombre de un objeto de tipo Lista.
      * @return Nombre de la lista.
      */
+=======
+    public Lista getObjectLista() {
+        return this;
+    }
+>>>>>>> Stashed changes
     public String getNombre() {
         return nombre;
     }

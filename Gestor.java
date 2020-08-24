@@ -5,27 +5,41 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Gestor
-{
-    // instance variables - replace the example below with your own
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class Gestor {
+
     private Tarea tarea;
     private Lista lista;
-    /**
-     * Constructor for objects of class Gestor
-     */
-    public Gestor()
-    {
+    private int pomCompletos = 0;
+
+    public int getPomCompletos() {
+        return pomCompletos;
+    }
+
+    public void setPomCompletos(int pomCompletos) {
+        this.pomCompletos = pomCompletos;
+    }
+
+    public Gestor() {
         // initialise instance variables
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public void pomodoro()
-    {
-        // put your code here
+    public void pomodoro() {
+        int segundos = 10;
+        while(segundos>0){
+            try {
+                System.out.println(segundos);
+                segundos--;
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Gestor.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        System.out.println("Lograste completar un pomodoro!");
+        pomCompletos++;
+        
     }
 }
